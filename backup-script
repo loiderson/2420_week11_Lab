@@ -6,6 +6,6 @@
 #: Description : Backup files from server to backup server using rsync
 #: Options     : None
 
-/opt/.git/2420_week11_Lab/backup-script.conf
+. /home/SO-user/.git/2420_week11_Lab/config.sh
 
-rsync -avz ${FILE_PATH_COPY} backup-user@${FILE_PATH_IP_DESTINATION}:/home/backup-user/Lab11 -e "ssh -i home/SO-user/.ssh/backup-server-KEY"
+rsync -r ${FILE_PATH_COPY} backup-user@${IP_DESTINATION}:/home/backup-user/BackUp -e "ssh -i ~/.ssh/backup-server-KEY"
