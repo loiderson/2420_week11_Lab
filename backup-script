@@ -1,0 +1,11 @@
+#!/bin/bash
+#: Title       : Backup file to server
+#: Date        : Nov 20 2022
+#: Author      : Coburn Nguyen & Jacob Lloyd
+#: Version     : 1.0
+#: Description : Backup files from server to backup server using rsync
+#: Options     : None
+
+/opt/.git/2420_week11_Lab/backup-script.conf
+
+rsync -avz ${FILE_PATH_COPY} ${FILE_PATH_IP_DESTINATION}

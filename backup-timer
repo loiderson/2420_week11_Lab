@@ -1,0 +1,25 @@
+#!bin/bash
+#: Title       : Timer to run service
+#: Date        : Nov 20 2022
+#: Author      : Coburn Nguyen & Jacob Llyod
+#: Version     : 1.0
+#: Description : Timer that will run service every Friday randomly at 01:00
+#: Options     : None
+
+[Unit]
+Description=Backup Timer
+
+[Timer]
+# Runs, every Friday, weekly, at 01:00:00
+OnCalender=Fri --* 01:00:00
+
+#Strech dispatching of similarity configured timer events over a certain time interval,
+#to prevent them from firing all at the same time, resulting in resource congestion
+RandomizedDelaySec=1m
+
+
+#Execute job if it missed a run due to a machine being off
+Persistent=true
+
+[Install]
+WantedBy=timers.target
