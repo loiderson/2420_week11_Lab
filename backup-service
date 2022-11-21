@@ -11,7 +11,7 @@ Description=backup files from a server to a backup server using rsync
 
 [Service]
 Type=oneshot
-ExecStart=~/.git/2420_week11_Lab
+ExecStart=/opt/.git/2420_week11_Lab/backup-script
 
 [Install]
 WantedBy=multi-user.target

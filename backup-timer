@@ -11,12 +11,14 @@ Description=Backup Timer
 
 [Timer]
 # Runs, every Friday, weekly, at 01:00:00
-OnCalender=Fri --* 01:00:00
+OnCalender=Fri *-*-* 01:00:00
 
 #Strech dispatching of similarity configured timer events over a certain time interval,
 #to prevent them from firing all at the same time, resulting in resource congestion
 RandomizedDelaySec=1m
 
+#Service Unit
+Unit=backup-service
 
 #Execute job if it missed a run due to a machine being off
 Persistent=true
